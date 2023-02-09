@@ -31,7 +31,7 @@ export default function Post() {
           <img src="/imagens/xavier.jpeg" alt="" />
           <p>
             Curtido por <strong>xavier</strong> e
-            <strong>outras 5.926 pessoas</strong>
+            <strong> outras 5.926 pessoas</strong>
           </p>
         </div>
         <div className="comentario">

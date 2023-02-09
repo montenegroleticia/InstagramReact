@@ -6,9 +6,7 @@ export default function SideBar() {
           <img src="/imagens/wandinha.jpeg" alt="" />
           <div className="nome-login">
             <p className="negrito">wandinha</p>
-            <p data-test="name" className="cinza">
-              Wandinha Addams
-            </p>
+            <ion-icon name="pencil"></ion-icon>
           </div>
         </div>
         <div className="sugestoes">

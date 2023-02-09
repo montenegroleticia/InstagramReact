@@ -329,6 +329,15 @@ ion-icon {
   height: 56px;
   border-radius: 28px;
 }
+.nome-login {
+  display: flex;
+  align-items: center;
+}
+.nome-login ion-icon {
+  margin-left: 5px;
+  font-size: 15px;
+  color: black;
+}
 .sugestoes {
   display: flex;
   justify-content: space-between;
@@ -362,22 +371,28 @@ ion-icon {
   color: #139ef2;
 }
 .cinza-sugestao {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   color: #8e8e8e;
 }
 .cinza {
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   color: #8e8e8e;
-  margin-left: 10px;
+  margin-left: 11px;
 }
 .negrito {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
   margin-left: 11px;
   color: #262626;
 }
