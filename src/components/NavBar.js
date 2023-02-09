@@ -5,7 +5,7 @@ export default function NavBar() {
         <div className="logo">
           <ion-icon name="logo-instagram"></ion-icon>
           <div className="separador"></div>
-          <img src="../public/assets/midia/logo.png" alt="logo" />
+          <img src="./midia/logo.png" alt="logo" />
         </div>
 
         <div className="pesquisa">

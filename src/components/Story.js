@@ -2,10 +2,10 @@ export default function Story() {
   return (
     <div>
       <div className="user">
-        <img
+      <img
           className="back-user"
-          src="/imagens/stories_background.jpg"
-          alt=""
+          src="./midia/stories_background.jpg"
+          alt="Fundo do storys"
         />
         <img className="front-user" src="/imagens/enid.jpeg" alt="" />
         <p>enid</p>
