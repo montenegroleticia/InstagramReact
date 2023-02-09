@@ -47,7 +47,10 @@ export default function Post() {
             <p>cold as my heart</p>
           </div>
           <div>
-            <ion-icon name="heart-outline" className="icone-comentario"></ion-icon>
+            <ion-icon
+              name="heart-outline"
+              className="icone-comentario"
+            ></ion-icon>
           </div>
         </div>
         <div className="add-comentario">

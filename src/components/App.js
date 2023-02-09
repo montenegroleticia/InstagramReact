@@ -1,14 +1,14 @@
-import Nav from "./Nav";
+import NavBar from "./NavBar";
 import NavMobile from "./NavMobile";
-import Feed from "./Feed";
+import Corpo from "./Corpo";
 import NavInferior from "./NavInferior";
 
 export default function App() {
   return (
     <div>
-      <Nav />
+      <NavBar />
       <NavMobile />
-      <Feed />
+      <Corpo />
       <NavInferior />
     </div>
   );
