@@ -4,7 +4,7 @@ export default function NavMobile() {
       <ion-icon name="logo-instagram"></ion-icon>
       <div>
         <img
-          src="/imagens/logo.png"
+          src="./midia/logo.png"
           alt="O nome Instagram em preto com fundo branco"
         />
       </div>
