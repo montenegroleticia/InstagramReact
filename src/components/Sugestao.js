@@ -1,11 +1,11 @@
-export default function Sugestao() {
+export default function Sugestao(props) {
   return (
     <div className="sugestao">
       <div className="sugestao-perfil">
-        <img src="/imagens/yoko.jpeg" alt="" />
+        <img src={props.image} alt={props.nome} />
         <div>
-          <p className="negrito">yoko</p>
-          <p className="cinza">Yoko Tanaka</p>
+          <p className="negrito">{props.user}</p>
+          <p className="cinza">{props.nome}</p>
         </div>
       </div>
       <a href="#">Seguir</a>
