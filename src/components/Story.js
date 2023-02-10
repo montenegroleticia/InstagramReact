@@ -1,4 +1,4 @@
-export default function Story() {
+export default function Story(props) {
   return (
     <div>
       <div className="user">
@@ -7,8 +7,8 @@ export default function Story() {
           src="./midia/stories_background.jpg"
           alt="Fundo do storys"
         />
-        <img className="front-user" src="/imagens/enid.jpeg" alt="" />
-        <p>enid</p>
+        <img className="front-user" src={props.image} alt={props.nome} />
+        <p>{props.nome}</p>
       </div>
     </div>
   );
