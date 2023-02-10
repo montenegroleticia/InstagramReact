@@ -1,21 +1,23 @@
-export default function Post() {
+export default function Post(props) {
   return (
     <div data-test="post" className="post">
       <div className="perfil">
         <div className="user-perfil">
           <img
-            src="/imagens/enid.jpeg"
-            alt="menina loira com mechas rosa e camisa colorida sorrindo"
+            src= {props.image}
+            alt= {props.name}
           />
-          <h2>enid</h2>
+          <h2>{props.name}</h2>
         </div>
         <div>
           <ion-icon name="ellipsis-horizontal"></ion-icon>
         </div>
       </div>
+
       <div data-test="post-image" className="conteudo-post">
-        <img src="/imagens/post-enid.jpg" alt="" />
+        <img src={props.post} alt={props.name} />
       </div>
+
       <div className="infos">
         <div className="infos-emoji">
           <div className="esquerda-emoji">
@@ -28,23 +30,23 @@ export default function Post() {
           </div>
         </div>
         <div className="curtidas">
-          <img src="/imagens/xavier.jpeg" alt="" />
+          <img src={props.curtidoImage} alt={props.curtidoName} />
           <p>
-            Curtido por <strong>xavier</strong> e
-            <strong> outras 5.926 pessoas</strong>
+            Curtido por <strong>{props.curtidoName}</strong> e
+            <strong> outras {props.curtidas} pessoas</strong>
           </p>
         </div>
         <div className="comentario">
-          <h2>enid</h2>
-          <p>Cold days</p>
+          <h2>{props.name}</h2>
+          <p>{props.texto}</p>
         </div>
         <div className="cinza-comentarios">
-          <p>Veja todos os 738 comentários</p>
+          <p>Veja todos os {props.comentarios} comentários</p>
         </div>
         <div className="comentario-icon">
           <div className="comentarios">
-            <h2>wandinha</h2>
-            <p>cold as my heart</p>
+            <h2>{props.comentarioUser}</h2>
+            <p>{props.comentario}</p>
           </div>
           <div>
             <ion-icon
