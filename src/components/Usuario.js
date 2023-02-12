@@ -9,7 +9,7 @@ export default function Usuario(props) {
       <img
         onClick={() => {
           const addImage = prompt("Qual o url da sua imagem?");
-          addImage ? setImage(addImage) : alert("Url invalida. Digite novamente.");
+          addImage.trim() ? setImage(addImage) : alert("Url inválida. Tente novamente.");
         }}
         src={image}
         alt={nome}
@@ -17,8 +17,8 @@ export default function Usuario(props) {
       <div className="nome-login">
         <p className="negrito">{nome}</p>
         <ion-icon onClick={() => {
-          const addNome = prompt("Altere o nome do usuário:");
-          addNome.trim() ?  setNome(addNome) : alert("Erro. Tente novamente.")
+          const addNome = prompt("Qual o nome do usuário?");
+          addNome.trim() ?  setNome(addNome) : alert("Nome inválido. Tente novamente.")
         }} name="pencil"></ion-icon>
       </div>
     </div>
