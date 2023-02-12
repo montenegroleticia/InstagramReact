@@ -68,19 +68,19 @@ export default function Post(props) {
       <div className="infos">
         <div className="infos-emoji">
           <div className="esquerda-emoji">
-            <ion-icon onClick={curtir} id={cor} name={curtido}></ion-icon>
+            <ion-icon data-test="like-post" onClick={curtir} id={cor} name={curtido}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
           <div className="direita-emoji">
-            <ion-icon onClick={salvar} name={salvo}></ion-icon>
+            <ion-icon data-test="save-post" onClick={salvar} name={salvo}></ion-icon>
           </div>
         </div>
         <div className="curtidas">
           <img src={props.curtidoImage} alt={props.curtidoName} />
           <p>
             Curtido por <strong>{props.curtidoName}</strong> e
-            <strong> outras {numLike} pessoas</strong>
+            <strong data-test="likes-number" > outras {numLike} pessoas</strong>
           </p>
         </div>
         <div className="comentario">
