@@ -2,14 +2,18 @@ import { useState } from "react";
 
 export default function Post(props) {
   const [curtido, setCurtido] = useState("heart-outline");
+  const [cor, setCor] = useState("");
   const [salvo, setSalvo] = useState("bookmark-outline");
   const [comentarioCurtido, setComentarioCurtido] = useState("heart-outline");
+  const [corComentario, setCorComentario] = useState("");
 
   function curtir(){
-    if (curtido === "heart-outline"){
+    if (curtido === "heart-outline" && cor === ""){
       setCurtido("heart");
+      setCor("vermelho");
     } else {
       setCurtido("heart-outline")
+      setCor("");
     }
   }
 
@@ -22,10 +26,12 @@ export default function Post(props) {
   }
 
   function curtirComentario(){
-    if (comentarioCurtido === "heart-outline"){
+    if (comentarioCurtido === "heart-outline" && corComentario === ""){
       setComentarioCurtido("heart");
+      setCorComentario("vermelho");
     } else {
       setComentarioCurtido("heart-outline")
+      setCorComentario("");
     }
   }
 
@@ -48,7 +54,7 @@ export default function Post(props) {
       <div className="infos">
         <div className="infos-emoji">
           <div className="esquerda-emoji">
-            <ion-icon onClick={curtir} name={curtido}></ion-icon>
+            <ion-icon onClick={curtir} id = {cor} name={curtido}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
@@ -79,7 +85,7 @@ export default function Post(props) {
             <ion-icon
               onClick={curtirComentario}
               name={comentarioCurtido}
-              className="icone-comentario"
+              className="icone-comentario" id={corComentario}
             ></ion-icon>
           </div>
         </div>
