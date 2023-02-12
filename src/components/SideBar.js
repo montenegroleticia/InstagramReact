@@ -5,7 +5,7 @@ export default function SideBar() {
   return (
     <div className="sidebar">
       <div className="sidebar-conteudo">
-        <Usuario />
+        <Usuario image = {"./midia/wandinha.jpeg"} nome = {"wandinha"}/>
         <Sugestoes />
       </div>
     </div>
