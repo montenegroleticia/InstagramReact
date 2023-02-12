@@ -6,14 +6,17 @@ export default function Post(props) {
   const [salvo, setSalvo] = useState("bookmark-outline");
   const [comentarioCurtido, setComentarioCurtido] = useState("heart-outline");
   const [corComentario, setCorComentario] = useState("");
+  const [numLike, setNumLike] = useState(Number(props.curtidas));
 
   function curtir(){
     if (curtido === "heart-outline" && cor === ""){
       setCurtido("heart");
       setCor("vermelho");
+      setNumLike(numLike + 1);
     } else {
       setCurtido("heart-outline")
       setCor("");
+      setNumLike(numLike - 1);
     }
   }
 
@@ -66,7 +69,7 @@ export default function Post(props) {
           <img src={props.curtidoImage} alt={props.curtidoName} />
           <p>
             Curtido por <strong>{props.curtidoName}</strong> e
-            <strong> outras {props.curtidas} pessoas</strong>
+            <strong> outras {numLike} pessoas</strong>
           </p>
         </div>
         <div className="comentario">
