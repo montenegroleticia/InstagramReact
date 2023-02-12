@@ -3,38 +3,49 @@ import { useState } from "react";
 export default function Post(props) {
   const [curtido, setCurtido] = useState("heart-outline");
   const [cor, setCor] = useState("");
+
   const [salvo, setSalvo] = useState("bookmark-outline");
+
   const [comentarioCurtido, setComentarioCurtido] = useState("heart-outline");
   const [corComentario, setCorComentario] = useState("");
+
   const [numLike, setNumLike] = useState(Number(props.curtidas));
 
-  function curtir(){
-    if (curtido === "heart-outline" && cor === ""){
+  function curtir() {
+    if (curtido === "heart-outline" && cor === "") {
       setCurtido("heart");
       setCor("vermelho");
       setNumLike(numLike + 1);
     } else {
-      setCurtido("heart-outline")
+      setCurtido("heart-outline");
       setCor("");
       setNumLike(numLike - 1);
     }
   }
 
-  function salvar(){
-    if (salvo === "bookmark-outline"){
+  function salvar() {
+    if (salvo === "bookmark-outline") {
       setSalvo("bookmark");
     } else {
-      setSalvo("bookmark-outline")
+      setSalvo("bookmark-outline");
     }
   }
 
-  function curtirComentario(){
-    if (comentarioCurtido === "heart-outline" && corComentario === ""){
+  function curtirComentario() {
+    if (comentarioCurtido === "heart-outline" && corComentario === "") {
       setComentarioCurtido("heart");
       setCorComentario("vermelho");
     } else {
-      setComentarioCurtido("heart-outline")
+      setComentarioCurtido("heart-outline");
       setCorComentario("");
+    }
+  }
+
+  function curtirFoto() {
+    if (curtido === "heart-outline" && cor === "") {
+      setCurtido("heart");
+      setCor("vermelho");
+      setNumLike(numLike + 1);
     }
   }
 
@@ -51,13 +62,13 @@ export default function Post(props) {
       </div>
 
       <div data-test="post-image" className="conteudo-post">
-        <img src={props.post} alt={props.name} />
+        <img onClick={curtirFoto} src={props.post} alt={props.name} />
       </div>
 
       <div className="infos">
         <div className="infos-emoji">
           <div className="esquerda-emoji">
-            <ion-icon onClick={curtir} id = {cor} name={curtido}></ion-icon>
+            <ion-icon onClick={curtir} id={cor} name={curtido}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
@@ -88,7 +99,8 @@ export default function Post(props) {
             <ion-icon
               onClick={curtirComentario}
               name={comentarioCurtido}
-              className="icone-comentario" id={corComentario}
+              className="icone-comentario"
+              id={corComentario}
             ></ion-icon>
           </div>
         </div>
