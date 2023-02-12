@@ -1,12 +1,39 @@
+import { useState } from "react";
+
 export default function Post(props) {
+  const [curtido, setCurtido] = useState("heart-outline");
+  const [salvo, setSalvo] = useState("bookmark-outline");
+  const [comentarioCurtido, setComentarioCurtido] = useState("heart-outline");
+
+  function curtir(){
+    if (curtido === "heart-outline"){
+      setCurtido("heart");
+    } else {
+      setCurtido("heart-outline")
+    }
+  }
+
+  function salvar(){
+    if (salvo === "bookmark-outline"){
+      setSalvo("bookmark");
+    } else {
+      setSalvo("bookmark-outline")
+    }
+  }
+
+  function curtirComentario(){
+    if (comentarioCurtido === "heart-outline"){
+      setComentarioCurtido("heart");
+    } else {
+      setComentarioCurtido("heart-outline")
+    }
+  }
+
   return (
     <div data-test="post" className="post">
       <div className="perfil">
         <div className="user-perfil">
-          <img
-            src= {props.image}
-            alt= {props.name}
-          />
+          <img src={props.image} alt={props.name} />
           <h2>{props.name}</h2>
         </div>
         <div>
@@ -21,12 +48,12 @@ export default function Post(props) {
       <div className="infos">
         <div className="infos-emoji">
           <div className="esquerda-emoji">
-            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon onClick={curtir} name={curtido}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
           <div className="direita-emoji">
-            <ion-icon name="bookmark-outline"></ion-icon>
+            <ion-icon onClick={salvar} name={salvo}></ion-icon>
           </div>
         </div>
         <div className="curtidas">
@@ -50,7 +77,8 @@ export default function Post(props) {
           </div>
           <div>
             <ion-icon
-              name="heart-outline"
+              onClick={curtirComentario}
+              name={comentarioCurtido}
               className="icone-comentario"
             ></ion-icon>
           </div>
