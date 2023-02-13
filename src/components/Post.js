@@ -52,8 +52,11 @@ export default function Post(props) {
       setCurtido(heart);
       setCor("vermelho");
       setNumLike(numLike + 1);
-      setAnimacao("animacao");
     }
+  }
+  function curtirAnimacao(){
+    setAnimacao("animacao");
+    curtirFoto();
   }
 
   return (
@@ -69,7 +72,7 @@ export default function Post(props) {
       </div>
 
       <div data-test="post-image" className="conteudo-post">
-        <img onDoubleClick={curtirFoto} src={props.post} alt={props.name} />
+        <img onClick={curtirFoto} onDoubleClick={curtirAnimacao} src={props.post} alt={props.name} />
         <ion-icon id="heart-color" className={animacao} name="heart"></ion-icon>
       </div>
 
