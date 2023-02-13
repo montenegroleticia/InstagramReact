@@ -2,7 +2,7 @@ export default function Story(props) {
   return (
     <div>
       <div className="user">
-      <img
+        <img
           className="back-user"
           src="./midia/stories_background.jpg"
           alt="Fundo do storys"
