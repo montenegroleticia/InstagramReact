@@ -2,15 +2,14 @@ import Sugestao from "./Sugestao";
 
 const infoSugestao = [
   {
-    key: "nevermore",
     image: "./midia/nevermore.png",
     user: "nevermore",
     nome: "Nevermore Academy",
   },
-  { key: "yoko", image: "./midia/yoko.jpeg", user: "yoko", nome: "Yoko Tanaka" },
-  { key: "beezzs", image: "./midia/bees.jpg", user: "beezzs", nome: "Bees Club" },
-  { key: "cello",image: "./midia/selo.jpg", user: "cello", nome: "Cello Store" },
-  { key: "jennaortega", image: "./midia/jenna.jpg", user: "jennaortega", nome: "Jenna Ortega" },
+  { image: "./midia/yoko.jpeg", user: "yoko", nome: "Yoko Tanaka" },
+  { image: "./midia/bees.jpg", user: "beezzs", nome: "Bees Club" },
+  { image: "./midia/selo.jpg", user: "cello", nome: "Cello Store" },
+  { image: "./midia/jenna.jpg", user: "jennaortega", nome: "Jenna Ortega" },
 ];
 
 export default function Sugestoes() {
@@ -22,6 +21,7 @@ export default function Sugestoes() {
       </div>
       {infoSugestao.map((sugestao) => (
         <Sugestao
+          key={sugestao.nome}
           image={sugestao.image}
           user={sugestao.user}
           nome={sugestao.nome}

@@ -49,6 +49,7 @@ export default function Posts() {
     <div>
       {infoPost.map((postagem) => (
         <Post
+          key={postagem.name}
           image={postagem.image}
           name={postagem.name}
           post={postagem.post}

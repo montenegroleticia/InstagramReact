@@ -18,7 +18,7 @@ export default function Stories() {
         <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
       {infoStory.map((user) => (
-        <Story image={user.image} nome={user.name} />
+        <Story key={user.name} image={user.image} nome={user.name} />
       ))}
     </div>
   );
