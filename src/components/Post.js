@@ -7,7 +7,6 @@ export default function Post(props) {
 
   const [curtido, setCurtido] = useState(heartLine);
   const [cor, setCor] = useState("");
-  const [animacao, setAnimacao] = useState("");
 
   const [salvo, setSalvo] = useState(bookline);
 
@@ -25,7 +24,6 @@ export default function Post(props) {
       setCurtido(heartLine);
       setCor("");
       setNumLike(numLike - 1);
-      setAnimacao("");
     }
   }
 
@@ -54,10 +52,6 @@ export default function Post(props) {
       setNumLike(numLike + 1);
     }
   }
-  function curtirAnimacao(){
-    setAnimacao("animacao");
-    curtirFoto();
-  }
 
   return (
     <div data-test="post" className="post">
@@ -72,8 +66,8 @@ export default function Post(props) {
       </div>
 
       <div data-test="post-image" className="conteudo-post">
-        <img onClick={curtirFoto} onDoubleClick={curtirAnimacao} src={props.post} alt={props.name} />
-        <ion-icon id="heart-color" className={animacao} name="heart"></ion-icon>
+        <img onClick={curtirFoto} src={props.post} alt={props.name} />
+        <ion-icon id="heart-color" name="heart"></ion-icon>
       </div>
 
       <div className="infos">
@@ -127,7 +121,7 @@ export default function Post(props) {
         <div className="add-comentario">
           <ion-icon name="happy-outline"></ion-icon>
           <input type="text" placeholder="Adicione um comentário..." />
-          <a href="">Publicar</a>
+          <a href="publicar.com">Publicar</a>
         </div>
       </div>
     </div>
