@@ -188,6 +188,7 @@ img {
   font-size: 150px;
   opacity: 0;
   transform: scale(0.2);
+  z-index: 10;
 }
 #heart-color.animacao {
   animation-name: coracao;
