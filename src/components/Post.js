@@ -67,7 +67,6 @@ export default function Post(props) {
 
       <div data-test="post-image" className="conteudo-post">
         <img onClick={curtirFoto} src={props.post} alt={props.name} />
-        <ion-icon id="heart-color" name="heart"></ion-icon>
       </div>
 
       <div className="infos">
