@@ -7,6 +7,7 @@ export default function Post(props) {
 
   const [curtido, setCurtido] = useState(heartLine);
   const [cor, setCor] = useState("");
+  const [clickDuplo, setClickDuplo] = useState("");
 
   const [salvo, setSalvo] = useState(bookline);
 
@@ -24,6 +25,7 @@ export default function Post(props) {
       setCurtido(heartLine);
       setCor("");
       setNumLike(numLike - 1);
+      setClickDuplo("");
     }
   }
 
@@ -52,6 +54,10 @@ export default function Post(props) {
       setNumLike(numLike + 1);
     }
   }
+  function clicou(){
+    setClickDuplo("clicou");
+    curtirFoto();
+  }
 
   return (
     <div data-test="post" className="post">
@@ -66,8 +72,8 @@ export default function Post(props) {
       </div>
 
       <div data-test="post-image" className="conteudo-post">
-        <img onDoubleClick={curtirFoto} src={props.post} alt={props.name} />
-        { cor ? <ion-icon id= "heart-color" class="animacao" name="heart"></ion-icon> : ''}
+        <img onDoubleClick={clicou} src={props.post} alt={props.name} />
+        { clickDuplo ? <ion-icon id= "heart-color" class="animacao" name="heart"></ion-icon> : ''}
       </div>
 
       <div className="infos">
