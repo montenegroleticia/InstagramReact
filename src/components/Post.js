@@ -7,6 +7,7 @@ export default function Post(props) {
 
   const [curtido, setCurtido] = useState(heartLine);
   const [cor, setCor] = useState("");
+  const [animacao, setAnimacao] = useState("");
 
   const [salvo, setSalvo] = useState(bookline);
 
@@ -24,6 +25,7 @@ export default function Post(props) {
       setCurtido(heartLine);
       setCor("");
       setNumLike(numLike - 1);
+      setAnimacao("");
     }
   }
 
@@ -50,6 +52,7 @@ export default function Post(props) {
       setCurtido(heart);
       setCor("vermelho");
       setNumLike(numLike + 1);
+      setAnimacao("animacao");
     }
   }
 
@@ -67,6 +70,7 @@ export default function Post(props) {
 
       <div data-test="post-image" className="conteudo-post">
         <img onDoubleClick={curtirFoto} src={props.post} alt={props.name} />
+        <ion-icon id="heart-color" className={animacao} name="heart"></ion-icon>
       </div>
 
       <div className="infos">

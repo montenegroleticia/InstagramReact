@@ -146,6 +146,7 @@ img {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #dbdbdb;
+  position: relative;
 }
 .perfil {
   border-bottom: 1px solid #dbdbdb;
@@ -178,6 +179,25 @@ img {
 .conteudo-post img {
   width: auto;
   height: 612px;
+}
+#heart-color {
+  color: white;
+  position: absolute;
+  left: 40%;
+  top: 35%;
+  font-size: 150px;
+  opacity: 0;
+  transform: scale(0.2);
+}
+#heart-color.animacao {
+  animation-name: coracao;
+  animation-duration: 0.3s;
+}
+@keyframes coracao {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .infos {
   border-top: 1px solid #dbdbdb;
