@@ -2,6 +2,7 @@ import Post from "./Post";
 
 const infoPost = [
   {
+    key: "enid",
     image: "./midia/enid.jpeg",
     name: "enid",
     post: "./midia/post-enid.jpg",
@@ -15,6 +16,7 @@ const infoPost = [
   },
 
   {
+    key: "wandinha",
     image: "./midia/wandinha.jpeg",
     name: "wandinha",
     post: "./midia/post-wandinha.jpg",
@@ -28,6 +30,7 @@ const infoPost = [
   },
 
   {
+    key: "tyler",
     image: "./midia/tyler.jpeg",
     name: "tyler",
     post: "./midia/post-tyler.jpg",

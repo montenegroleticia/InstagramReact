@@ -1,14 +1,14 @@
 import Story from "./Story";
 
 const infoStory = [
-  { image: "./midia/enid.jpeg", name: "enid" },
-  { image: "./midia/xavier.jpeg", name: "xavier" },
-  { image: "./midia/bianca.jpeg", name: "bianca" },
-  { image: "./midia/ajax.jpeg", name: "ajax" },
-  { image: "./midia/thing.jpeg", name: "thing" },
-  { image: "./midia/eugene.jpeg", name: "eugene" },
-  { image: "./midia/tyler.jpeg", name: "tyler" },
-  { image: "./midia/mortícia.jpeg", name: "morticia" },
+  { key: "enid", image: "./midia/enid.jpeg", name: "enid" },
+  { key: "xavier",image: "./midia/xavier.jpeg", name: "xavier" },
+  { key: "bianca", image: "./midia/bianca.jpeg", name: "bianca" },
+  { key: "ajax",image: "./midia/ajax.jpeg", name: "ajax" },
+  { key: "thing",image: "./midia/thing.jpeg", name: "thing" },
+  { key: "eugene", image: "./midia/eugene.jpeg", name: "eugene" },
+  { key: "tyler", image: "./midia/tyler.jpeg", name: "tyler" },
+  { key: "morticia",image: "./midia/mortícia.jpeg", name: "morticia" },
 ];
 
 export default function Stories() {
