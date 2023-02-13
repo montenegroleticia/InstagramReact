@@ -3,11 +3,12 @@ import { useState } from "react";
 export default function Post(props) {
   const heartLine = "heart-outline";
   const heart = "heart";
+  const bookline = "bookmark-outline";
 
   const [curtido, setCurtido] = useState(heartLine);
   const [cor, setCor] = useState("");
 
-  const [salvo, setSalvo] = useState("bookmark-outline");
+  const [salvo, setSalvo] = useState(bookline);
 
   const [comentarioCurtido, setComentarioCurtido] = useState(heartLine);
   const [corComentario, setCorComentario] = useState("");
@@ -27,10 +28,10 @@ export default function Post(props) {
   }
 
   function salvar() {
-    if (salvo === "bookmark-outline") {
+    if (salvo === bookline) {
       setSalvo("bookmark");
     } else {
-      setSalvo("bookmark-outline");
+      setSalvo(bookline);
     }
   }
 
