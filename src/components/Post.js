@@ -1,23 +1,26 @@
 import { useState } from "react";
 
 export default function Post(props) {
-  const [curtido, setCurtido] = useState("heart-outline");
+  const heartLine = "heart-outline";
+  const heart = "heart";
+
+  const [curtido, setCurtido] = useState(heartLine);
   const [cor, setCor] = useState("");
 
   const [salvo, setSalvo] = useState("bookmark-outline");
 
-  const [comentarioCurtido, setComentarioCurtido] = useState("heart-outline");
+  const [comentarioCurtido, setComentarioCurtido] = useState(heartLine);
   const [corComentario, setCorComentario] = useState("");
 
   const [numLike, setNumLike] = useState(Number(props.curtidas));
 
   function curtir() {
-    if (curtido === "heart-outline" && cor === "") {
-      setCurtido("heart");
+    if (curtido === heartLine && cor === "") {
+      setCurtido(heart);
       setCor("vermelho");
       setNumLike(numLike + 1);
     } else {
-      setCurtido("heart-outline");
+      setCurtido(heartLine);
       setCor("");
       setNumLike(numLike - 1);
     }
@@ -32,18 +35,18 @@ export default function Post(props) {
   }
 
   function curtirComentario() {
-    if (comentarioCurtido === "heart-outline" && corComentario === "") {
-      setComentarioCurtido("heart");
+    if (comentarioCurtido === heartLine && corComentario === "") {
+      setComentarioCurtido(heart);
       setCorComentario("vermelho");
     } else {
-      setComentarioCurtido("heart-outline");
+      setComentarioCurtido(heartLine);
       setCorComentario("");
     }
   }
 
   function curtirFoto() {
-    if (curtido === "heart-outline" && cor === "") {
-      setCurtido("heart");
+    if (curtido === heartLine && cor === "") {
+      setCurtido(heart);
       setCor("vermelho");
       setNumLike(numLike + 1);
     }
